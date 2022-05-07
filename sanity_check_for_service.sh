@@ -10,10 +10,10 @@ while true;
 
        if [ $checkApacheService -eq 0 ]; then
 
-            echo "Apache service up" >> /root/sanity_check.log
+            echo "Pid: [$$] , $(date) Apache service up" >> /root/sanity_check.log
 
        else
-            echo "Apache service down, starting Apache" >> /root/sanity_check_error.log
+            echo "Pid: [$$] , $(date) Apache service down, starting Apache" >> /root/sanity_check_error.log
 
             service apache2 start 
        fi 
